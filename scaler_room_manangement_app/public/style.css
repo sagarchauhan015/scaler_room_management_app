@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Niconne&family=Poppins:wght@100;200;300;400;500;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+:root {
+  --radio-color: #33adab;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.section-dashboard {
+  width: 100%;
+  height: 100vh;
+}
+.container-dashboard {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.navigation-menu {
+  padding: 2rem;
+  width: 20%;
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+.menu-heading {
+  padding: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.navigation-menu-item {
+  display: flex;
+  flex-direction: column;
+}
+.navigation-menu-item > * {
+  padding: 1rem;
+  color: white;
+}
+.navigation-menu-item > a:hover {
+  background-color: white;
+  color: black;
+  border-radius: 0.8rem;
+}
+.dashboard-content {
+  width: 80%;
+  padding: 2rem;
+}
+.booking-form {
+  width: 60%;
+  margin: auto;
+}
+.room-type,
+.user-email,
+.user-time,
+.price,
+.book-btn,
+.book-status {
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+}
+.left-col,
+.right-col {
+  width: 50%;
+}
+.left-col {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
+.left-col > label {
+  font-size: 1.2rem;
+}
+.right-col > * {
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+.user-email .right-col > input {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+}
+.price-span {
+  font-size: 0.8rem;
+  color: grey;
+}
+.right-col > p {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.book-btn {
+  justify-content: center;
+}
+.booking-button > button {
+  padding: 0.8rem 1.5rem;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+}
+.booking-button > button:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.booking-status {
+  text-align: center;
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(8, 172, 8);
+}
+
+/* Responsive CSS */
+@media (min-width: 900px) and (max-width: 1300px) {
+  .navigation-menu {
+    width: 30%;
+  }
+  .booking-form {
+    width: 100%;
+  }
+  .dashboard-content {
+    width: 100%;
+    padding: 2rem 0rem;
+  }
+  .room-type,
+  .user-email,
+  .user-time,
+  .price,
+  .book-btn,
+  .book-status {
+    margin-right: 3rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .navigation-menu {
+    width: 40%;
+  }
+  .booking-form {
+    width: 100%;
+  }
+  .dashboard-content {
+    width: 100%;
+    padding: 2rem 0rem;
+  }
+}
+@media (min-width: 300px) and (max-width: 600px) {
+  .container-dashboard {
+    flex-direction: column;
+  }
+  .navigation-menu {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .room-type {
+    flex-direction: column;
+  }
+  .left-col,
+  .right-col {
+    width: 100%;
+  }
+  .booking-form {
+    width: 100%;
+  }
+  .dashboard-content {
+    width: 100%;
+    padding: 2rem 0rem;
+  }
+  .left-col {
+    justify-content: flex-start;
+  }
+}

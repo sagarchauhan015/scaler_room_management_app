@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/style.css" type="text/css" >
+</head>
+<body>
+    <div class="section-dashboard">
+        <div class="container-dashboard">
+            
+            <div class="navigation-menu">
+                <div class="menu-heading">
+                    <p>Admin Panel</p>
+                </div>
+                <div class="navigation-menu-item">
+                    <a href="#">Create Booking</a>
+                    <a href="#">Edit Info</a>
+                    <a href="#">Cancel Booking</a>
+                    <a href="#">Booking History</a>
+                </div>
+            </div>
+
+            <div class="dashboard-content">
+                <div class="booking-form">
+                    <form action="/" method="POST">
+                        <div class="room-type">
+                            <div class="left-col">
+                                <label for="type">Room Type : </label>
+                            </div>
+                            <div class="right-col">
+                                <select id="roomtype" name="roomtype">
+                                    <option value="default" disabled selected>--Select--</option>
+                                    <option value="typeA">Type A</option>
+                                    <option value="typeB">Type B</option>
+                                    <option value="typeC">Type C</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="room-type">
+                            <div class="left-col">
+                                <label for="type">Available Rooms : </label>
+                            </div>
+                            <div class="right-col">
+                                <select id="roomNum" name="roomnum">
+                                    <option value="default" disabled selected>--Select--</option>
+                                    <option value="A1">A1</option>
+                                    <option value="A2">A2</option>
+                                    <option value="B1">B1</option>
+                                    <option value="B2">B2</option>
+                                    <option value="B3">B3</option>
+                                    <option value="C1">C1</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="user-email">
+                            <div class="left-col">
+                                <label for="email">User Email : </label>
+                            </div>
+                            <div class="right-col">
+                                <input type="email" name="email" id="">
+                            </div>
+                        </div>
+
+                        <div class="user-time">
+                            <div class="left-col">
+                                <label for="start-time">Check In Time : </label>
+                            </div>
+                            <div class="right-col">
+                                <input type="datetime-local" name="checkin" id="checkintime">
+                            </div>
+                        </div>
+
+                        <div class="user-time">
+                            <div class="left-col">
+                                <label for="end-time">Check Out Time : </label>
+                            </div>
+                            <div class="right-col">
+                                <input type="datetime-local" name="checkout" id="checkouttime">
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            <div class="left-col">
+                                <label for="price">Final Price <span class="price-span">(Incl. of all taxes)</span> :</label>
+                            </div>
+                            <div class="right-col">
+                                <p id="price_id" name="pricename">0.00 Rupees</p>
+                                <div class="check-button">
+                                    <span onclick="calcPrice()">Check Price</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="book-btn">
+                            <div class="booking-button">
+                                <button type="submit">Book Now</button>
+                            </div>
+                        </div>
+                        
+                        <div class="book-status">
+                            <p class="booking-status" id="booking">
+                            </p>
+                        </div>
+                        
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/front.js"></script>
+</body>
+</html>
